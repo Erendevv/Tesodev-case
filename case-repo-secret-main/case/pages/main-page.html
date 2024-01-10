@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Case</title>
+    <link rel="stylesheet" href="../assets/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+  <body>
+    <nav class="navbar">
+      <div>
+        <a href="add-link.html"><button class="btn-primary btn-nav">Add new record</button></a>
+      </div>
+      
+    </nav>
+    <div class="main">
+        <div class="container">
+        <div id="main-logo">
+            <div id="box">     
+        <img src="../assets/img/1.jpeg" width="278" height="115" alt="">
+                <p id="main-outline-p">Search app</p>
+            </div>
+       
+        </div> 
+        <div id="main-search">
+            <form class="d-flex" role="search" id="searchForm">
+                <div class="input-group">
+                    <h2 class="search-title">Find in records</h2>
+                    <div class="input-group-inline">                
+                    <i class="fa fa-search"></i>
+                    <input id="searchInput" class="form-control form-input" type="search" placeholder="Search" aria-label="Search">            
+                    <button class="btn-primary"  id="searchButton">Search</button>
+            </div>
+            </div>
+            </form>
+            <div id="resultContainer">
+
+            </div>
+        </div>
+        
+    </div>
+    </div>
+
+    <section class="top-news"> 
+        <div class="container">
+            <h3 class="top-news-title">Top News</h3>
+            <div class="row">
+                <div class="left-arrow" onclick="showNews('prev')">
+                <svg xmlns="http://www.w3.org/2000/svg" width="49" height="49" viewBox="0 0 49 49" fill="none">
+                    <rect x="0.162048" y="0.5" width="48" height="48" rx="24" fill="#EEEEEE"/>
+                    <path d="M30.162 36.5L18.162 24.5L30.162 12.5" stroke="#8A8A8A" stroke-width="2.7" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+                <div class="w-25" id="news1">
+                    <img class="top-new-images" src="../assets/img/image.jpg" alt="">
+                    <h5>A Plan to Rebuild the Bus Terminal Everyone Loves to Hate</h4>
+                    <p class="muted"> 1h ago . by Troy Corlson</p>
+                </div>
+                <div class="w-25" id="news2">
+                    <img class="top-new-images" src="../assets/img/image.jpg" alt="">
+                    <h5>A Plan to Rebuild the Bus Terminal Everyone Loves to Hate</h4>
+                    <p class="muted"> 2h ago . by Troy Corlson</p>
+                </div>
+                <div class="w-25" id="news3">
+                    <img class="top-new-images" src="../assets/img/image.jpg" alt="">
+                    <h5>A Plan to Rebuild the Bus Terminal Everyone Loves to Hate</h4>
+                    <p class="muted"> 3h ago . by Troy Corlson</p>
+                </div>
+                <div class="w-25" id="news4" style="display: none;">
+                    <img class="top-new-images" src="../assets/img/image.jpg" alt="">
+                    <h5>A Plan to Rebuild the Bus Terminal Everyone Loves to Hate</h4>
+                    <p class="muted"> 4h ago . by Troy Corlson</p>
+                </div>
+                <div class="right-arrow" onclick="showNews('next')">
+                <svg xmlns="http://www.w3.org/2000/svg" width="49" height="49" viewBox="0 0 49 49" fill="none">
+                    <rect width="48" height="48" rx="24" transform="matrix(-1 0 0 1 48.5146 0.5)" fill="#EEEEEE"/>
+                    <path d="M18.5146 36.5L30.5146 24.5L18.5146 12.5" stroke="#8A8A8A" stroke-width="2.7" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="left-side">
+                    <div class="row">        
+                        <div class="col-md-4">
+                            <img class="footer-img" src="../assets/img/image.jpg" alt="">
+                        </div>
+                        <div class="col-md-8">
+                            <h5>İletişim</h5>
+                            <p>Adres:Çifte Havuzlar Mah. eski Londra Asfaltı Cad. Kulukça Merkezi D2 Blok No:151/1F İç Kapı No: 2B03 Esenler/İstanbul</p>
+                            <br>
+                            <p class="strong">Email: bilgi@tesodev.com</p>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12041.118984277!2d28.8909481!3d41.0191353!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cabb7abf29ba35%3A0xc98f44e9057adcde!2zVGVzb2RldiBZYXrEsWzEsW0!5e0!3m2!1str!2str!4v1704185976151!5m2!1str!2str" width="600" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+    
+        function showNews(direction) { 
+            if (direction === 'next') {
+                document.getElementById('news1').style.display ='none';
+                document.getElementById('news4').style.display ='block';
+  
+            } else if (direction === 'prev') {
+                document.getElementById('news1').style.display ='block';
+                document.getElementById('news4').style.display ='none';
+            }
+    
+        }
+    </script>
+
+
+    <script src="../assets/script.js"></script>
+</body>
+</html>
